@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nivriti Products</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Nivriti</h1>
+    <p>Handmade Products | Message us on Facebook to order</p>
+    <a href="https://facebook.com/nivriti" target="_blank">Facebook Page</a>
+  </header>
+
+  <main>
+    <h2>Our Products</h2>
+    <div id="product-grid"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Nivriti</p>
+  </footer>
+
+  <script>
+    fetch('products.json')
+      .then(r => r.json())
+      .then(products => {
+        const grid = document.getElementById('product-grid');
+        products.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <img src="${p.image}" alt="${p.name}" />
+            <h3>${p.name}</h3>
+            <p>${p.description}</p>
+            <p><strong>৳${p.price}</strong></p>
+            <a href="${p.fb_link}" target="_blank">Message on Facebook</a>
+          `;
+          grid.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
