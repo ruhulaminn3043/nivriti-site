@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Handmade Candle",
+    "description": "Scented soy candle in glass jar",
+    "price": "450",
+    "image": "https://via.placeholder.com/200",
+    "fb_link": "https://facebook.com/nivriti"
+  },
+  {
+    "name": "Daisy Glass Candle",
+    "description": "Glass jar with daisy design",
+    "price": "380",
+    "image": "https://via.placeholder.com/200",
+    "fb_link": "https://facebook.com/nivriti"
+  }
+]
